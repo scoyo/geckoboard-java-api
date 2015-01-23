@@ -41,4 +41,7 @@ public class ListWidget extends Push {
         }
     }
 
+    public List<ListItem> getItems() {
+        return items;
+    }
 }
