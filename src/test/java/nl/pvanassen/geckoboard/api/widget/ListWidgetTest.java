@@ -40,22 +40,22 @@ public class ListWidgetTest {
         JsonNode node = data.get("data");
         Assert.assertNull(node.get("widgetKey"));
 
-        Assert.assertTrue(node.get("item").isArray());
-        Assert.assertEquals(4, node.get("item").size());
+        Assert.assertTrue(node.isArray());
+        Assert.assertEquals(4, node.size());
 
-        JsonNode item1 = node.get("item").get(0);
+        JsonNode item1 = node.get(0);
         Assert.assertEquals("TestText1", item1.get("title").get("text").asText());
         Assert.assertEquals("false", item1.get("title").get("highlight").asText());
 
-        JsonNode item2 = node.get("item").get(1);
+        JsonNode item2 = node.get(1);
         Assert.assertEquals("TestText2", item2.get("title").get("text").asText());
         Assert.assertNull(item2.get("title").get("highlight"));
 
-        JsonNode item3 = node.get("item").get(2);
+        JsonNode item3 = node.get(2);
         Assert.assertEquals("TestText3", item3.get("title").get("text").asText());
         Assert.assertEquals("true", item3.get("title").get("highlight").asText());
 
-        JsonNode item4 = node.get("item").get(3);
+        JsonNode item4 = node.get(3);
         Assert.assertEquals("TestText4", item4.get("title").get("text").asText());
         Assert.assertNull(item4.get("title").get("highlight"));
 

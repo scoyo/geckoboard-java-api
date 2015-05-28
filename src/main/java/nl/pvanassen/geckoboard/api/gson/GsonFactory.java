@@ -2,6 +2,10 @@ package nl.pvanassen.geckoboard.api.gson;
 
 import java.awt.Color;
 
+import nl.pvanassen.geckoboard.api.json.serializer.TextItemTypeAdaptor;
+import nl.pvanassen.geckoboard.api.json.text.TextItemType;
+import nl.pvanassen.geckoboard.api.json.serializer.ListWidgetTypeAdaptor;
+import nl.pvanassen.geckoboard.api.widget.ListWidget;
 import nl.pvanassen.highchart.api.base.Style;
 import nl.pvanassen.highchart.api.format.DateTimeLabelFormats;
 import nl.pvanassen.highchart.api.serializer.DateTimeLabelFormatsSerializer;
@@ -37,6 +41,8 @@ public final class GsonFactory {
 
     private GsonFactory() {
         gsonBuilder = new GsonBuilder();
+        gsonBuilder.registerTypeAdapter(TextItemType.class, new TextItemTypeAdaptor());
+        gsonBuilder.registerTypeAdapter(ListWidget.class, new ListWidgetTypeAdaptor());
         gsonBuilder.registerTypeAdapter(Color.class, new AwtColorTypeAdapter());
         gsonBuilder.registerTypeAdapter(DateTimeLabelFormats.class, new DateTimeLabelFormatsSerializer());
         gsonBuilder.registerTypeAdapter(Style.class, new StyleSerializer());

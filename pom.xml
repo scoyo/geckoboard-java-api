@@ -7,7 +7,7 @@
 		<version>0.3</version>
 	</parent>
 	<artifactId>geckoboard-api</artifactId>
-	<version>0.2-SNAPSHOT</version>
+	<version>0.2.4-indix</version>
 	<name>Geckoboard java API</name>
 	<description>A Java API to generate highchart json on the server side.</description>
 	<url>http://www.pvanassen.nl</url>
@@ -96,4 +96,15 @@
 			<scope>test</scope>			
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>release</id>
+			<url>http://artifacts.indix.tv/artifactory/libs-release-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<url>http://artifacts.indix.tv/artifactory/libs-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 </project>

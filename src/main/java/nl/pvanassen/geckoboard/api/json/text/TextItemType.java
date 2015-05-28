@@ -12,16 +12,23 @@ public enum TextItemType {
     /**
      * No alert icon
      */
-    @SerializedName("0")
-    NONE(),
+    NONE(0),
     /**
      * Alert icon
      */
-    @SerializedName("1")
-    ALERT(),
+    ALERT(1),
     /**
      * Info icon
      */
-    @SerializedName("2")
-    INFO();
+    INFO(2);
+
+    private int key;
+    TextItemType(int key) {
+        this.key = key;
+    }
+
+    public int getKey() {
+        return key;
+    }
+
 }
