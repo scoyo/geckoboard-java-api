@@ -1,12 +1,12 @@
 package nl.pvanassen.geckoboard.api.widget;
 
+import com.google.gson.annotations.SerializedName;
+
 import nl.pvanassen.geckoboard.api.Push;
 import nl.pvanassen.geckoboard.api.error.ValidationException;
 import nl.pvanassen.geckoboard.api.json.common.GraphType;
 import nl.pvanassen.geckoboard.api.json.common.TextStrValueItem;
 import nl.pvanassen.geckoboard.api.json.common.TextStrValuePrefixItem;
-
-import com.google.gson.annotations.SerializedName;
 
 public class NumberAndSecondaryStat extends Push {
 
@@ -27,6 +27,10 @@ public class NumberAndSecondaryStat extends Push {
 
     public void setPrimary(String primary, String prefix) {
         items[0] = new TextStrValuePrefixItem("", primary, prefix);
+    }
+
+    public void setPrimary(String text, String primary, String prefix) {
+        items[0] = new TextStrValuePrefixItem(text, primary, prefix);
     }
 
     public void setSecondary(String secondary) {

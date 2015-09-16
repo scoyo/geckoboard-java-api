@@ -7,13 +7,13 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.Charset;
 
-import nl.pvanassen.geckoboard.api.gson.GsonFactory;
-
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.gson.Gson;
+
+import nl.pvanassen.geckoboard.api.gson.GsonFactory;
 
 public class Geckoboard {
 
@@ -77,7 +77,7 @@ public class Geckoboard {
                 logger.error("Error sending json, error: "
                         + new String(IOUtils.toByteArray(connection.getErrorStream()), Geckoboard.DEFAULT_CHARSET)
                         + ", json send: " + json);
-                return;
+                throw new IOException("Error sending json");
             }
             httpInputStream = connection.getInputStream();
             final byte[] responseXml = IOUtils.toByteArray(httpInputStream);
