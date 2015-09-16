@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<groupId>nl.pvanassen</groupId>
+	<artifactId>geckoboard-api</artifactId>
+	<version>0.2.4.SCOYO</version>
+	<name>Geckoboard java API</name>
+	<description>A Java API to generate highchart json on the server side.</description>
+
 	<parent>
 		<artifactId>parent</artifactId>
 		<groupId>nl.pvanassen</groupId>
 		<version>0.3</version>
 	</parent>
-	<artifactId>geckoboard-api</artifactId>
-	<version>0.2.4.SCOYO</version>
-	<name>Geckoboard java API</name>
-	<description>A Java API to generate highchart json on the server side.</description>
+
 	<url>http://www.pvanassen.nl</url>
+
 	<organization>
 		<name>Paul van Assen</name>
 		<url>http://www.pvanassen.nl</url>
 	</organization>
+
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -22,6 +27,7 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+
 	<developers>
 		<developer>
 			<id>pvanassen</id>
@@ -29,26 +35,32 @@
 			<email>source@pvanassen.nl</email>
 		</developer>
 	</developers>
+
 	<prerequisites>
 		<maven>3.0.4</maven>
 	</prerequisites>
+
 	<scm>
 		<connection>scm:git:git@github.com:pvanassen/geckoboard-java-api.git</connection>
 		<developerConnection>scm:git:git@github.com:pvanassen/geckoboard-java-api.git</developerConnection>
 		<tag>HEAD</tag>
 		<url>https://github.com/pvanassen/geckoboard-java-api</url>
 	</scm>
+
 	<issueManagement>
 		<system>GitHub Issues</system>
 		<url>https://github.com/pvanassen/geckoboard-java-api/issues</url>
 	</issueManagement>
+
 	<ciManagement>
 		<system>Jenkins</system>
 		<url>http://build.pvanassen.nl</url>
 	</ciManagement>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
@@ -96,6 +108,20 @@
 			<scope>test</scope>			
 		</dependency>
 	</dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>scoyo-releases</name>
+            <url>https://scoyo.artifactoryonline.com/scoyo/libs-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>scoyo-snapshots</name>
+            <url>https://scoyo.artifactoryonline.com/scoyo/libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <!--
 	<distributionManagement>
 		<repository>
 			<id>release</id>
@@ -106,5 +132,6 @@
 			<url>http://artifacts.indix.tv/artifactory/libs-snapshot-local</url>
 		</snapshotRepository>
 	</distributionManagement>
-
+    -->
+    
 </project>
