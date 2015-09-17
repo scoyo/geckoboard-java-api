@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nl.pvanassen</groupId>
 	<artifactId>geckoboard-api</artifactId>
-	<version>0.2.4.SCOYO</version>
+	<version>0.2.5.SCOYO-SNAPSHOT</version>
 	<name>Geckoboard java API</name>
 	<description>A Java API to generate highchart json on the server side.</description>
 
